@@ -1,0 +1,6 @@
+category: Gnome Python
+requires: cygwin glib2 gtk2-x11 libgtkhtml2 python python-gobject2 python-gtk2
+external-source: gnome-python-extras
+sdesc: "Python bindings for the GNOME GtkHTML2 library"
+ldesc: "Python bindings for the GNOME GtkHTML2 library"
+

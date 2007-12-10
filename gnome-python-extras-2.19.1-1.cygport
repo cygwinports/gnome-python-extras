@@ -1,0 +1,33 @@
+inherit pygtk
+
+n=0
+
+PKG_NAMES="${PN}"
+PKG_HINTS="setup"
+PKG_CONTENTS[$((n++))]="usr/lib/pkgconfig/${PN}* usr/share/doc/${P}/"
+
+for p in egg gda gdl gtkhtml2 gtkspell # gksu gksu2 gtkmozembed
+do
+	PKG_NAMES+=" python-${p}"
+	PKG_HINTS+=" ${p}"
+
+	case ${p} in
+		gda)	PKG_CONTENTS[${n}]+=" usr/include/ usr/lib/pkgconfig/pygda*" ;;
+	esac
+
+	PKG_CONTENTS[${n}]+=" ${PYGTK_LIBDIR#/}/${p}*
+	                      usr/share/doc/Cygwin/python-${p}-${PV}.README"
+
+	case ${p} in
+		gtkmozembed|gtkspell)
+			PKG_CONTENTS[${n}]+=" usr/share/gtk-doc/html/py${p}/" ;;
+	esac
+
+	case ${p} in
+		egg)	PKG_CONTENTS[${n}]+=" ${PYGTK_DATADIR#/}/defs/trayicon*" ;;
+		gda)	PKG_CONTENTS[${n}]+=" ${PYGTK_DATADIR#/}/*/${p}*" ;;
+		gtkhtml2)	PKG_CONTENTS[${n}]+=" ${PYGTK_DATADIR#/}/defs/${p}*" ;;
+	esac
+
+	let n++
+done

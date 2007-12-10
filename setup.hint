@@ -1,0 +1,5 @@
+category: Gnome Python
+requires: python-egg python-gda python-gdl python-gtkhtml2 python-gtkspell
+sdesc: "Python GNOME extras bindings (meta-package)"
+ldesc: "Python bindings for GNOME non-platform, non-desktop libraries"
+
