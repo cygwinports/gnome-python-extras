@@ -1,5 +1,5 @@
 category: Gnome Python
-requires: cygwin glib2 libgda30 python python-gobject2
+requires: cygwin libglib2.0_0 libgda3.0_3 python python-gobject2
 external-source: gnome-python-extras
 sdesc: "Python bindings for the GNOME libgda2 library"
 ldesc: "Python bindings for the GNOME libgda2 library"

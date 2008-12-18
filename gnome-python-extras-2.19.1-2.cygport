@@ -1,0 +1,31 @@
+inherit pygtk
+
+PATCH_URI="2.19-gdl2_24.patch"
+
+PKG_NAMES="${PN}"
+gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/${P}/"
+
+for p in egg gda gdl gtkhtml2 gtkspell # gksu gksu2 gtkmozembed
+do
+	PKG_NAMES+=" python-${p}"
+
+	case ${p} in
+		gda)	declare python_${p}_CONTENTS+=" usr/include/ usr/lib/pkgconfig/pygda*" ;;
+	esac
+
+	declare python_${p}_CONTENTS+=" ${PYGTK_LIBDIR#/}/${p}*
+	                                 usr/share/doc/Cygwin/python-${p}-${PV}.README"
+
+	case ${p} in
+		gtkmozembed|gtkspell)
+			declare python_${p}_CONTENTS+=" usr/share/gtk-doc/html/py${p}/" ;;
+	esac
+
+	case ${p} in
+		egg)	declare python_${p}_CONTENTS+=" ${PYGTK_DATADIR#/}/defs/trayicon*" ;;
+		gda)	declare python_${p}_CONTENTS+=" ${PYGTK_DATADIR#/}/*/${p}*" ;;
+		gtkhtml2)	declare python_${p}_CONTENTS+=" ${PYGTK_DATADIR#/}/defs/${p}*" ;;
+	esac
+done
+
+PKG_IGNORE="usr/share/gtk-doc/html/pygtkmozembed/"

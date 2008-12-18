@@ -1,28 +1,27 @@
-python-gtkspell
+python-gtkhtml2
 ------------------------------------------
-Python bindings for the GtkSpell library.
+Python bindings for the GNOME GtkHTML2 library.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.12-1
-  gtk2-x11-2.10.12-1
-  gtkspell-2.0.11-2
-  python-2.5.1-3
-  python-gobject2-2.14.0-1
-  python-gtk2-2.12.0-1
+  cygwin-1.5.25-15
+  libglib2.0_0-2.18.3-1
+  libgtk2.0_0-2.14.5-1
+  libgtkhtml2_0-2.11.1-2
+  python-2.5.2-4
+  python-gobject2-2.15.4-1
+  python-gtk2-2.13.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -53,18 +52,16 @@ This will create:
 
 Files included in the binary package:
 
-  /usr/lib/python2.5/site-packages/gtk-2.0/gtkspell.dll
-  /usr/lib/python2.5/site-packages/gtk-2.0/gtkspell.la
-  /usr/share/doc/Cygwin/python-gtkspell-2.19.1.README
-  /usr/share/gtk-doc/html/pygtkspell/class-gtkspell.html
-  /usr/share/gtk-doc/html/pygtkspell/gtkspell-class-reference.html
-  /usr/share/gtk-doc/html/pygtkspell/index.html
-  /usr/share/gtk-doc/html/pygtkspell/index.sgml
-  /usr/share/gtk-doc/html/pygtkspell/pygtkspell.devhelp
+  /usr/lib/python2.5/site-packages/gtk-2.0/gtkhtml2.dll
+  /usr/lib/python2.5/site-packages/gtk-2.0/gtkhtml2.la
+  /usr/share/pygtk/2.0/defs/gtkhtml2.defs
 
 ------------------
 
 Port Notes:
+
+----- version 2.19.1-2 -----
+Rebuilt.
 
 ----- version 2.19.1-1 -----
 Version bump for GNOME 2.20.

@@ -1,5 +1,5 @@
 category: Gnome Python
-requires: cygwin glib2 gtk2-x11 gtkspell python python-gobject2 python-gtk2
+requires: cygwin libglib2.0_0 libgtk2.0_0 libgtkspell0 python python-gobject2 python-gtk2
 external-source: gnome-python-extras
 sdesc: "Python bindings for the GtkSpell library"
 ldesc: "Python bindings for the GtkSpell library"

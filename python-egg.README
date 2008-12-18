@@ -1,26 +1,33 @@
-python-gda
+python-egg
 ------------------------------------------
-Python bindings for the GNOME libgda2 library.
+Python bindings for the GNOME libegg library.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.14.4-1
-  libgda30-3.0.1-1
-  python-2.5.1-3
-  python-gobject2-2.14.0-1
+  cygwin-1.5.25-15
+  libgconf2_4-2.24.0-1
+  libglib2.0_0-2.18.3-1
+  libgnomevfs2_0-2.24.0-1
+  libgtk2.0_0-2.14.5-1
+  libX11_6-1.1.5-1
+  libbonoboui2_0-2.24.0-1
+  libgnomeui2_0-2.24.0-1
+  python-2.5.2-4
+  python-bonobo2-2.22.3-1
+  python-gnome2-2.22.3-1
+  python-gobject2-2.15.4-1
+  python-gtk2-2.13.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -34,7 +41,7 @@ Canonical download:
 Build instructions:
   unpack gnome-python-extras-2.19.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
-     unpacked under /usr/src automatically
+	 unpacked under /usr/src automatically
   cd /usr/src
   cygport ./gnome-python-extras-2.19.1-X.cygport all
 
@@ -51,25 +58,27 @@ This will create:
 
 Files included in the binary package:
 
-  /usr/include/pygda-3.0/pygdavalue_conversions.h
-  /usr/lib/pkgconfig/pygda-3.0.pc
-  /usr/lib/python2.5/site-packages/gtk-2.0/gda.dll
-  /usr/lib/python2.5/site-packages/gtk-2.0/gda.la
-  /usr/share/doc/Cygwin/python-gda-2.19.1.README
-  /usr/share/pygtk/2.0/argtypes/gda-arg-types.py
-  /usr/share/pygtk/2.0/argtypes/gda-arg-types.pyc
-  /usr/share/pygtk/2.0/argtypes/gda-arg-types.pyo
-  /usr/share/pygtk/2.0/defs/gda.defs
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.py
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.pyc
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.pyo
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/recent.dll
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/recent.la
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/trayicon.dll
+  /usr/lib/python2.4/site-packages/gtk-2.0/egg/trayicon.la
+  /usr/share/pygtk/2.0/defs/trayicon.defs
 
 ------------------
 
 Port Notes:
 
+----- version 2.19.1-2 -----
+Rebuilt.
+
 ----- version 2.19.1-1 -----
 Version bump for GNOME 2.20.
 
 ----- version 2.14.3-1 -----
-Version bump, built for python-2.5.
+Version bump, built with python-2.5.
 
 ----- version 2.14.0-1 -----
 Version bump for GNOME 2.12.

@@ -1,34 +1,27 @@
-python-egg
+python-gdl
 ------------------------------------------
-Python bindings for the GNOME libegg library.
+Python bindings for the GNOME gdl-1 library.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  GConf2-2.20.1-1
-  glib2-2.14.4-1
-  gnome-vfs2-2.20.1-1
-  gtk2-x11-2.12.2-1
-  libX11_6-1.1.3-1
-  libbonoboui2-2.20.0-1
-  libgnomeui2-2.20.1.1-1
-  python-2.5.1-3
-  python-bonobo2-2.20.1-1
-  python-gnome2-2.20.1-1
-  python-gobject2-2.14.0-1
-  python-gtk2-2.12.0-1
+  cygwin-1.5.25-15
+  libgdl1_0-2.24.0-1
+  libglib2.0_0-2.18.3-1
+  libgtk2.0_0-2.14.5-1
+  python-2.5.2-4
+  python-gobject2-2.15.4-1
+  python-gtk2-2.13.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -42,7 +35,7 @@ Canonical download:
 Build instructions:
   unpack gnome-python-extras-2.19.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
-	 unpacked under /usr/src automatically
+     unpacked under /usr/src automatically
   cd /usr/src
   cygport ./gnome-python-extras-2.19.1-X.cygport all
 
@@ -59,25 +52,21 @@ This will create:
 
 Files included in the binary package:
 
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.py
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.pyc
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/__init__.pyo
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/recent.dll
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/recent.la
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/trayicon.dll
-  /usr/lib/python2.4/site-packages/gtk-2.0/egg/trayicon.la
-  /usr/share/doc/Cygwin/python-egg-2.19.1.README
-  /usr/share/pygtk/2.0/defs/trayicon.defs
+  /usr/lib/python2.5/site-packages/gtk-2.0/gdl.dll
+  /usr/lib/python2.5/site-packages/gtk-2.0/gdl.la
 
 ------------------
 
 Port Notes:
 
+----- version 2.19.1-2 -----
+Rebuilt.
+
 ----- version 2.19.1-1 -----
 Version bump for GNOME 2.20.
 
 ----- version 2.14.3-1 -----
-Version bump, built with python-2.5.
+Version bump, built for python-2.5.
 
 ----- version 2.14.0-1 -----
 Version bump for GNOME 2.12.

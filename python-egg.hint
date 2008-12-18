@@ -1,5 +1,5 @@
 category: Gnome Python
-requires: cygwin GConf2 glib2 gnome-vfs2 gtk2-x11 libX11_6 libbonoboui2 libgnomeui2 python-bonobo2 python-gnome2 python-gtk2 python-gobject2
+requires: cygwin libgconf2_4 libglib2.0_0 libgnomevfs2_0 libgtk2.0_0 libX11_6 libbonoboui2_0 libgnomeui2_0 python-bonobo2 python-gnome2 python-gtk2 python-gobject2
 external-source: gnome-python-extras
 sdesc: "Python EggRecentFiles and EggTrayIcon bindings"
 ldesc: "Python bindings for the GNOME EggRecentFiles and EggTrayIcon libraries"

@@ -1,0 +1,10 @@
+--- origsrc/gnome-python-extras-2.19.1/gdl/gdl.override	2007-06-05 09:52:30.000000000 -0500
++++ src/gnome-python-extras-2.19.1/gdl/gdl.override	2008-12-18 13:49:09.587625000 -0600
+@@ -6,7 +6,6 @@
+ #include <pygtk/pygtk.h>
+ #include <gdl/gdl-dock.h>
+ #include <gdl/libgdltypebuiltins.h>
+-#include <gdl/gdl-icons.h>
+ #ifndef HAVE_GDL_0_7
+ # include <gdl/gdl-dock-bar.h>
+ #endif
