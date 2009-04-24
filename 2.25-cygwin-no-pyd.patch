@@ -1,0 +1,11 @@
+--- origsrc/gnome-python-extras-2.25.3/gda/Makefile.am	2008-12-11 19:06:29.000000000 -0600
++++ src/gnome-python-extras-2.25.3/gda/Makefile.am	2009-04-21 13:34:23.968125000 -0500
+@@ -58,7 +58,7 @@ gda.c: gda.defs gda.override $(argtypes_
+ 	&& cp gen-$*.c $*.c \
+ 	&& rm -f gen-$*.c
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ # Python .pyd modules are simply DLLs, but they have to be called .pyd for
+ # python to find them, and libtool only creates .dll.
+ install-exec-hook:

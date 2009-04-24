@@ -1,11 +1,15 @@
 inherit pygtk
 
-PATCH_URI="2.19-gdl2_24.patch"
+PATCH_URI="
+	2.25-cygwin-no-pyd.patch
+	2.25-docs.patch
+	2.25-libtool22.patch
+"
 
 PKG_NAMES="${PN}"
-gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/${P}/"
+gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/${PN}/"
 
-for p in egg gda gdl gtkhtml2 gtkspell # gksu gksu2 gtkmozembed
+for p in egg gda gdl gtkhtml2 gtkspell # gtkmozembed gksu gksu2
 do
 	PKG_NAMES+=" python-${p}"
 
@@ -14,7 +18,7 @@ do
 	esac
 
 	declare python_${p}_CONTENTS+=" ${PYGTK_LIBDIR#/}/${p}*
-	                                 usr/share/doc/Cygwin/python-${p}-${PV}.README"
+	                                 usr/share/doc/Cygwin/python-${p}.README"
 
 	case ${p} in
 		gtkmozembed|gtkspell)
@@ -28,4 +32,4 @@ do
 	esac
 done
 
-PKG_IGNORE="usr/share/gtk-doc/html/pygtkmozembed/"
+CYGCONF_ARGS="--enable-docs --disable-gtkmozembed --disable-gksu --disable-gksuui --disable-gksu2"
