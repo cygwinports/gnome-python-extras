@@ -1,13 +1,13 @@
-inherit pygtk
+inherit pygtk git
 
 PATCH_URI="
 	2.25-cygwin-no-pyd.patch
-	2.25-docs.patch
 	2.25-libtool22.patch
+	2.27-gdl.patch
 "
 
 PKG_NAMES="${PN}"
-gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/${PN}/"
+gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/"
 
 for p in egg gda gdl gtkhtml2 gtkspell # gtkmozembed gksu gksu2
 do
@@ -17,8 +17,7 @@ do
 		gda)	declare python_${p}_CONTENTS+=" usr/include/ usr/lib/pkgconfig/pygda*" ;;
 	esac
 
-	declare python_${p}_CONTENTS+=" ${PYGTK_LIBDIR#/}/${p}*
-	                                 usr/share/doc/Cygwin/python-${p}.README"
+	declare python_${p}_CONTENTS+=" ${PYGTK_LIBDIR#/}/${p}*"
 
 	case ${p} in
 		gtkmozembed|gtkspell)

@@ -1,0 +1,21 @@
+--- origsrc/gnome-python-extras/gdl/gdl.defs	2009-11-10 00:58:16.000000000 -0600
++++ src/gnome-python-extras/gdl/gdl.defs	2009-11-10 01:21:56.949103000 -0600
+@@ -550,18 +550,6 @@
+   (return-type "gboolean")
+ )
+ 
+-(define-method get_ui
+-  (of-object "GdlDockLayout")
+-  (c-name "gdl_dock_layout_get_ui")
+-  (return-type "GtkWidget*")
+-)
+-
+-(define-method get_items_ui
+-  (of-object "GdlDockLayout")
+-  (c-name "gdl_dock_layout_get_items_ui")
+-  (return-type "GtkWidget*")
+-)
+-
+ (define-method get_layouts_ui
+   (of-object "GdlDockLayout")
+   (c-name "gdl_dock_layout_get_layouts_ui")

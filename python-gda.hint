@@ -1,5 +1,5 @@
 category: Gnome Python
-requires: libgcc1 libglib2.0_0 libgda3.0_3 python python-gobject2
+requires: libgcc1 libglib2.0_0 libgda4.0_4 python python-gobject2.0
 external-source: gnome-python-extras
 sdesc: "Python bindings for the GNOME data access library"
 ldesc: "Python bindings for the GNOME data access library"
