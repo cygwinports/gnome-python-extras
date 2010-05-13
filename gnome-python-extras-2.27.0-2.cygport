@@ -1,3 +1,4 @@
+GIT_REV="eda1dae" # master requires libgda-4.1?
 inherit pygtk git
 
 PATCH_URI="
@@ -9,7 +10,7 @@ PATCH_URI="
 PKG_NAMES="${PN}"
 gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/"
 
-for p in egg gda gdl gtkhtml2 gtkspell # gtkmozembed gksu gksu2
+for p in egg gda gdl gtkspell
 do
 	PKG_NAMES+=" python-${p}"
 
@@ -31,4 +32,9 @@ do
 	esac
 done
 
-CYGCONF_ARGS="--enable-docs --disable-gtkmozembed --disable-gksu --disable-gksuui --disable-gksu2"
+for nop in gtkhtml2 gtkmozembed gksu gksu2
+do
+	CYGCONF_ARGS+=" --disable-${nop}"
+done
+
+CYGCONF_ARGS+=" --enable-docs"
