@@ -1,0 +1,38 @@
+GIT_REV=7684237
+inherit pygtk git
+
+NAME="gnome-python-extras"
+VERSION=2.29.0
+RELEASE=2
+CATEGORY="Python"
+SUMMARY="Python GNOME extras bindings"
+DESCRIPTION="Python bindings for GNOME non-platform, non-desktop libraries"
+
+PATCH_URI="
+	2.25-libtool22.patch
+	2.27-gdl.patch
+"
+
+PKG_NAMES="${PN} python-egg python-gdl python-gtkspell"
+gnome_python_extras_CONTENTS="usr/lib/pkgconfig/${PN}* usr/share/doc/"
+python_egg_SUMMARY="Python EggTrayIcon bindings"
+python_egg_REQUIRES="python-gtk2.0 python-gobject"
+python_egg_CONTENTS="${PYGTK_LIBDIR#/}/egg* ${PYGTK_DATADIR#/}/defs/trayicon*"
+python_gdl_SUMMARY="Python bindings for the GNOME Dock Library"
+python_gdl_REQUIRES="python-gobject python-gtk2.0"
+python_gdl_CONTENTS="${PYGTK_LIBDIR#/}/gdl*"
+python_gtkspell_SUMMARY="Python bindings for the GtkSpell library"
+python_gtkspell_REQUIRES="python-gobject python-gtk2.0"
+python_gtkspell_CONTENTS+=" ${PYGTK_LIBDIR#/}/gtkspell* usr/share/gtk-doc/html/pygtkspell/"
+
+CYGCONF_ARGS="
+	--enable-docs
+	--disable-eggrecent
+	--enable-eggtray
+	--enable-gdl
+	--disable-gksu
+	--disable-gksu2
+	--disable-gtkhtml2
+	--disable-gtkmozembed
+	--enable-gtkspell
+"
