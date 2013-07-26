@@ -21,6 +21,7 @@ python_gtkspell_SUMMARY="Python bindings for the GtkSpell library"
 python_gtkspell_REQUIRES="python-gobject python-gtk2.0"
 python_gtkspell_CONTENTS+=" ${PYGTK_LIBDIR#/}/gtkspell* usr/share/gtk-doc/html/pygtkspell/"
 
+WANT_AUTOMAKE=1.9
 CYGCONF_ARGS="
 	--enable-docs
 	--disable-eggrecent
